@@ -54,7 +54,7 @@ module.exports = Command.extend({
             console.log('Parsing collection...');
             return parseCollection(cfg.target, exclude, cfg.auto, r.jxon)
             .then(createAllZips)
-            .then(importAll)
+            //.then(importAll) -- ignoring this, as we just want to create the zip files
             .then(ok);
         })
         .catch(function(err) {
